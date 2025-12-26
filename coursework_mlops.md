@@ -199,8 +199,12 @@ ratio_demand_supply(t+5) = log((demand(t+5) + 1) / (supply(t+5) + 1))
 2. **ML Model (LightGBM)**
 - расчёт прогнозов спроса и предложения при cache miss;
 
-**Fallback Mechanism**
+3. **Fallback Mechanism**
 - при недоступности модели используется последний успешный прогноз или базовый pricing;
+
+**Model Management:** Model Registry MLflow
+- логирование метрик и артефактов;
+- хранение последней актуальной версии модели в MLflow Model Registry;
 
 **Pricing Service**
 - применение бизнес-логики;
